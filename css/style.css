@@ -13,14 +13,19 @@ Dark green: #28b485
   box-sizing: border- box;
 }
 
+html {
+  /* set font-size to 10px if browser default */
+  font-size: 62.5%;
+}
+
 body {
   /* fonts go in body to inherit through the document*/
   font-family: "Lato", sans-serif;
-  font-weight: 400px;
-  font-size: 16px;
+  font-weight: 400;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px; /* gives the entire page padding, makes for a nice "paper on top of desk" feel */
+  padding: 3rem; /* gives the entire page padding, makes for a nice "paper on top of desk" feel */
 }
 
 .header {
@@ -35,12 +40,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px; /* width is auto */
+  height: 3.5rem; /* width is auto */
 }
 
 .text-box {
@@ -58,14 +63,14 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; /* (fixes unknown bug that causes vertical "shake" on animations) */
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 .heading-primary-main {
   display: block; /* occupy 100% of width of page, next element will be newline */
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 20px;
+  letter-spacing: 2rem;
   animation: moveInLeft 1s ease-out;
   /* animation options
   animation: name duration timing-function delay iteration-count direction fill-mode; */
@@ -73,20 +78,20 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
   animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   70% {
-    transform: translateX(5px);
+    transform: translateX(0.5rem);
   }
 
   100% {
@@ -98,11 +103,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   70% {
-    transform: translateX(-5px);
+    transform: translateX(-0.5rem);
   }
 
   100% {
@@ -114,7 +119,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(5rem);
   }
 
   100% {
@@ -127,22 +132,23 @@ body {
 button:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block; /* makes it lie properly under the display block elements above */
-  border-radius: 20px;
+  border-radius: 2rem;
   transition: all 0.15s; /* affects all transform properties for psuedo classes */
   position: relative; /* enables position absolute for .button::after element */
+  font-size: 1.6rem;
 }
 
 .button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
   /* on click */
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .button-white {
@@ -156,7 +162,7 @@ button:visited {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 2rem;
   position: absolute; /* hiding this element behind button */
   top: 0;
   left: 0;
