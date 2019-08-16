@@ -23,33 +23,30 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-  /* makes the logo's(child el) absolute positioning be relative to this, instead of thesssssssssssss document */ }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem;
-  /* width is auto */ }
-
-.header__text-box {
-  position: absolute;
-  /* take element out of document flow */
-  top: 25%;
-  /* position it according to parent element */
-  left: 50%;
-  /* position it according to parent element */
-  transform: translate(-50%, -50%);
-  /* redefine the "anchor point" of the element from top-left -> center */
-  text-align: center;
-  /* every el inside is centered, also the button since its inline-box */ }
+  /* makes the logo's(child el) absolute positioning be relative to this, instead of the document */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /* width is auto */ }
+  .header__text-box {
+    position: absolute;
+    /* take element out of document flow */
+    top: 25%;
+    /* position it according to parent element */
+    left: 50%;
+    /* position it according to parent element */
+    transform: translate(-50%, -50%);
+    /* redefine the "anchor point" of the element from top-left -> center */
+    text-align: center;
+    /* every el inside is centered, also the button since its inline-box */ }
 
 .heading-primary {
   color: #fff;
@@ -57,23 +54,21 @@ body {
   backface-visibility: hidden;
   /* (fixes unknown bug that causes vertical "shake" on animations) */
   margin-bottom: 5rem; }
-
-.heading-primary--main {
-  display: block;
-  /* occupy 100% of width of page, next element will be newline */
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 2rem;
-  animation: moveInLeft 1s ease-out;
-  /* animation options
-  animation: name duration timing-function delay iteration-count direction fill-mode; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
-  animation: moveInRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    /* occupy 100% of width of page, next element will be newline */
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation: moveInLeft 1s ease-out;
+    /* animation options
+    animation: name duration timing-function delay iteration-count direction fill-mode; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -103,6 +98,12 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+.button--white {
+  background-color: #fff;
+  color: #777; }
+  .button--white::after {
+    background-color: #fff; }
+
 .button:link,
 button:visited {
   text-transform: uppercase;
@@ -116,44 +117,37 @@ button:visited {
   position: relative;
   /* enables position absolute for .button::after element */
   font-size: 1.6rem; }
-
-.button:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
-
-.button:active {
-  /* on click */
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.button--white {
-  background-color: #fff;
-  color: #777; }
-
-.button::after {
-  /* this element is only used for displaying a secondary effect */
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 2rem;
-  position: absolute;
-  /* hiding this element behind button */
-  top: 0;
-  left: 0;
-  z-index: -1; }
-
-.button--white::after {
-  background-color: #fff; }
-
-.button:active::after {
-  animation-name: expandOnClick;
-  animation-duration: 0.2s;
-  /* something with the active class is making it play the animation in reverse after click,
-  and only play for the duration of the click */ }
-
-.button--animated {
-  animation: moveInBottom 0.5s ease-in-out 0.5s backwards; }
+  .button:link:hover,
+  button:visited:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .button:link:active,
+  button:visited:active {
+    /* on click */
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .button:link:active::after,
+    button:visited:active::after {
+      animation-name: expandOnClick;
+      animation-duration: 0.2s;
+      /* something with the active class is making it play the animation in reverse after click,
+        and only play for the duration of the click */ }
+  .button:link::after,
+  button:visited::after {
+    /* this element is only used for displaying a secondary effect */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    /* hiding this element behind button */
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .button:link--animated,
+  button:visited--animated {
+    animation: moveInBottom 0.5s ease-in-out 0.5s backwards; }
 
 @keyframes expandOnClick {
   0% {
