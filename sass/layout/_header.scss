@@ -1,0 +1,34 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.9),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; /* makes the logo's(child el) absolute positioning be relative to this, instead of the document */
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem; /* width is auto */
+  }
+
+  &__text-box {
+    position: absolute; /* take element out of document flow */
+    top: 25%; /* position it according to parent element */
+    left: 50%; /* position it according to parent element */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* redefine the "anchor point" of the element from top-left -> center */
+    text-align: center; /* every el inside is centered, also the button since its inline-box */
+  }
+}

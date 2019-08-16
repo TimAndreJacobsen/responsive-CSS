@@ -1,0 +1,53 @@
+.button {
+  &--white {
+    background-color: $color-white;
+    color: $color-grey;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+}
+
+.button:link,
+button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block; /* makes it lie properly under the display block elements above */
+  border-radius: 2rem;
+  transition: all 0.15s; /* affects all transform properties for psuedo classes */
+  position: relative; /* enables position absolute for .button::after element */
+  font-size: 1.6rem;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+  }
+  &:active {
+    /* on click */
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    &::after {
+      animation-name: expandOnClick;
+      animation-duration: 0.2s;
+      /* something with the active class is making it play the animation in reverse after click,
+          and only play for the duration of the click */
+    }
+  }
+  &::after {
+    /* this element is only used for displaying a secondary effect */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute; /* hiding this element behind button */
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-in-out 0.5s backwards;
+  }
+}
