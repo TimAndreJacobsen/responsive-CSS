@@ -1,25 +1,15 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
+/* Colors */
 *,
 *::before,
 *::after {
   margin: 0px;
   padding: 0px;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   /* set font-size to 10px if browser default */
   font-size: 62.5%;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   /* fonts go in body to inherit through the document*/
@@ -28,136 +18,117 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem; /* gives the entire page padding, makes for a nice "paper on top of desk" feel */
-}
+  padding: 3rem;
+  /* gives the entire page padding, makes for a nice "paper on top of desk" feel */ }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fd3, #28b485a4),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; /* makes the logo's(child el) absolute positioning be relative to this, instead of thesssssssssssss document */
-}
+  position: relative;
+  /* makes the logo's(child el) absolute positioning be relative to this, instead of thesssssssssssss document */ }
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
 .header__logo {
-  height: 3.5rem; /* width is auto */
-}
+  height: 3.5rem;
+  /* width is auto */ }
 
 .header__text-box {
-  position: absolute; /* take element out of document flow */
-  top: 25%; /* position it according to parent element */
-  left: 50%; /* position it according to parent element */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* redefine the "anchor point" of the element from top-left -> center */
-  text-align: center; /* every el inside is centered, also the button since its inline-box */
-}
+  position: absolute;
+  /* take element out of document flow */
+  top: 25%;
+  /* position it according to parent element */
+  left: 50%;
+  /* position it according to parent element */
+  transform: translate(-50%, -50%);
+  /* redefine the "anchor point" of the element from top-left -> center */
+  text-align: center;
+  /* every el inside is centered, also the button since its inline-box */ }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  backface-visibility: hidden; /* (fixes unknown bug that causes vertical "shake" on animations) */
-  margin-bottom: 5rem;
-}
+  backface-visibility: hidden;
+  /* (fixes unknown bug that causes vertical "shake" on animations) */
+  margin-bottom: 5rem; }
 
 .heading-primary--main {
-  display: block; /* occupy 100% of width of page, next element will be newline */
+  display: block;
+  /* occupy 100% of width of page, next element will be newline */
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 2rem;
   animation: moveInLeft 1s ease-out;
   /* animation options
-  animation: name duration timing-function delay iteration-count direction fill-mode; */
-}
+  animation: name duration timing-function delay iteration-count direction fill-mode; */ }
 
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.5rem;
-  animation: moveInRight 1s ease-out;
-}
+  animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
-  }
-
+    transform: translateX(-10rem); }
   70% {
-    transform: translateX(0.5rem);
-  }
-
+    transform: translateX(0.5rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
-  }
-
+    transform: translateX(10rem); }
   70% {
-    transform: translateX(-0.5rem);
-  }
-
+    transform: translateX(-0.5rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(5rem);
-  }
-
+    transform: translateY(5rem); }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
 
 .button:link,
 button:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
-  display: inline-block; /* makes it lie properly under the display block elements above */
+  display: inline-block;
+  /* makes it lie properly under the display block elements above */
   border-radius: 2rem;
-  transition: all 0.15s; /* affects all transform properties for psuedo classes */
-  position: relative; /* enables position absolute for .button::after element */
-  font-size: 1.6rem;
-}
+  transition: all 0.15s;
+  /* affects all transform properties for psuedo classes */
+  position: relative;
+  /* enables position absolute for .button::after element */
+  font-size: 1.6rem; }
 
 .button:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
 .button:active {
   /* on click */
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .button--white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
 
 .button::after {
   /* this element is only used for displaying a secondary effect */
@@ -166,40 +137,31 @@ button:visited {
   height: 100%;
   width: 100%;
   border-radius: 2rem;
-  position: absolute; /* hiding this element behind button */
+  position: absolute;
+  /* hiding this element behind button */
   top: 0;
   left: 0;
-  z-index: -1;
-}
+  z-index: -1; }
 
 .button--white::after {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .button:active::after {
   animation-name: expandOnClick;
   animation-duration: 0.2s;
   /* something with the active class is making it play the animation in reverse after click,
-  and only play for the duration of the click */
-}
+  and only play for the duration of the click */ }
 
 .button--animated {
-  animation: moveInBottom 0.5s ease-in-out 0.5s backwards;
-}
+  animation: moveInBottom 0.5s ease-in-out 0.5s backwards; }
 
 @keyframes expandOnClick {
   0% {
     opacity: 1;
-    transform: scale(1);
-  }
-
+    transform: scale(1); }
   70% {
     opacity: 0.1;
-    transform: scale(1.5);
-  }
-
+    transform: scale(1.5); }
   100% {
     opacity: 0;
-    transform: scale(2);
-  }
-}
+    transform: scale(2); } }
