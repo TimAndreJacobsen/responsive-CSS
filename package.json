@@ -1,0 +1,22 @@
+{
+  "name": "sass-bem-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimAndreJacobsen/responsive-CSS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimAndreJacobsen/responsive-CSS/issues"
+  },
+  "homepage": "https://github.com/TimAndreJacobsen/responsive-CSS#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
