@@ -84,6 +84,25 @@ body {
   padding: 3rem;
   /* gives the entire page padding, makes for a nice "paper on top of desk" feel */ }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #55c57a, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent; }
+  .heading-secondary:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
 .button--white {
   background-color: #fff;
   color: #777; }
@@ -164,7 +183,6 @@ button:visited {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -173,7 +191,6 @@ button:visited {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: green;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 8rem; }
@@ -187,3 +204,8 @@ button:visited {
     width: calc((100% - 3 * 8rem) / 4); }
   .row .col-2-of-4 {
     width: calc( ((100% - 3 * 8rem) / 4) * 2 + 8rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -10vh; }

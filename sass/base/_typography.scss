@@ -29,3 +29,23 @@ body {
   color: $color-grey;
   padding: 3rem; /* gives the entire page padding, makes for a nice "paper on top of desk" feel */
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
