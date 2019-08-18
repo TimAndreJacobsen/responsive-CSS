@@ -122,6 +122,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-icons-large {
+  font-size: 10rem; }
+
 .button--white {
   background-color: #fff;
   color: #777; }
@@ -217,6 +220,22 @@ button:visited {
     transform: scale(0.95);
     opacity: 0.925; }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s; }
+  .feature-box__icon {
+    font-size: 10rem; }
+  .feature-box__text {
+    font-size: inherit; }
+  .feature-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -231,7 +250,9 @@ button:visited {
     left: 4rem; }
   .header__logo {
     height: 3.5rem;
-    /* width is auto */ }
+    /* width is auto */
+    font-size: 7rem;
+    color: white; }
   .header__text-box {
     position: absolute;
     /* take element out of document flow */
@@ -272,3 +293,9 @@ button:visited {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -10vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); }

@@ -3,3 +3,15 @@
   padding: 25rem 0;
   margin-top: -10vh;
 }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.9),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
